@@ -1,10 +1,7 @@
-import random
+#Escolher o numero 
+numero_secreto = int(input("digite o numero secreto"))
 
-# Gerar um número secreto entre 1 e 100
-numero_secreto = random.randint(1, 100)
 
-# Inicializar o contador de tentativas
-tentativas = 0
 acertou = False
 
 # Iniciar o loop do jogo
@@ -12,18 +9,12 @@ while not acertou:
     # Solicitar ao jogador uma tentativa
     tentativa = int(input("Tente adivinhar o número secreto (entre 1 e 100): "))
     
-    # Incrementar o contador de tentativas
-    tentativas += 1
     
     # Verificar se o jogador acertou
     if tentativa == numero_secreto:
-        print(f"Parabéns! Você acertou o número secreto ({numero_secreto}) em {tentativas} tentativas.")
+        print(f"Parabéns! Você acertou o número secreto ({numero_secreto}).")
         acertou = True
     elif tentativa < numero_secreto:
-        print("Tente um número maior.")
+        print(f"Tente um número maior ({tentativa}).")
     else:
-        print("Tente um número menor.")
-
-
-    print("escolha outro numero de")
-    numero
+        print(f"Tente um número menor.({tentativa})")
